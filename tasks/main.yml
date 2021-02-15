@@ -9,7 +9,7 @@
         
     - name: Add repository for Microsoft ODBC Driver for SQL Server
       ansible.builtin.get_url:
-        url: https://packages.microsoft.com/config/ubuntu/{{ ansible_facts['ansible_distribution_version'] }}/prod.list
+        url: https://packages.microsoft.com/config/ubuntu/{{ ansible_facts['distribution_version'] }}/prod.list
         dest: /etc/apt/sources.list.d/mssql-release.list
         mode: '0440'  
         
