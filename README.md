@@ -29,12 +29,13 @@ Example Playbook
         version: master
         name: odbc-driver-for-mssql-on-ubuntu
 
+   Playbook
     
     - hosts: php
       roles:
          - { role: odbc-driver-for-mssql-on-ubuntu }
    
-   OR
+   Task
 
     - tasks
     
