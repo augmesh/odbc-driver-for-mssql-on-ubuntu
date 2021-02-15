@@ -21,9 +21,18 @@ None
 Example Playbook
 ----------------
 
+    # Add to requirements.txt
+    # forked to augmesh and updated
+    # https://github.com/amestsantim/odbc-driver-for-mssql-on-ubuntu
+    # for php
+      - src: https://github.com/augmesh/odbc-driver-for-mssql-on-ubuntu
+        version: master
+        name: odbc-driver-for-mssql-on-ubuntu
+
+    
     - hosts: php
       roles:
-         - { role: amestsantim.odbc-driver-for-mssql-on-ubuntu }
+         - { role: odbc-driver-for-mssql-on-ubuntu }
    
    OR
 
