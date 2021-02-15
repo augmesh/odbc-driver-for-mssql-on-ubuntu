@@ -1,7 +1,7 @@
 ODBC Driver for MSSQL Server on Ubuntu
 =========
 
-Role to enalbe usage of SQL Server from PHP on Ubuntu
+Role to enable usage of SQL Server from PHP on Ubuntu
 
 Requirements
 ------------
