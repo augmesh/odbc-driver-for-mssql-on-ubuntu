@@ -21,9 +21,20 @@ None
 Example Playbook
 ----------------
 
-    - hosts: servers
+    - hosts: php
       roles:
          - { role: amestsantim.odbc-driver-for-mssql-on-ubuntu }
+   
+   OR
+
+    - tasks
+    
+        - name: role https://github.com/augmesh/odbc-driver-for-mssql-on-ubuntu
+          include_role:
+            name: odbc-driver-for-mssql-on-ubuntu
+          vars:
+            mssql_driver_php_version: "{{ php_version }}"
+        
 
 License
 -------
