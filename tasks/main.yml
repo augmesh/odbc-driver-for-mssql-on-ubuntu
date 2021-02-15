@@ -17,14 +17,19 @@
       apt:
         update_cache: yes
 
+    - name: accept license agreement
+      ansible.builtin.shell: echo "msodbcsql17 msodbcsql/ACCEPT_EULA boolean true" | debconf-set-selections
+
+# not sure yet if we need this or not
+#    - name: accept license agreement
+#      ansible.builtin.shell: echo "mssql-tools msodbcsql/ACCEPT_EULA boolean true" | debconf-set-selections
+
     - name: Install msodbcsql17, unixodbc-dev and mssql-tools
       apt: pkg={{ item }} state=present
       with_items:
         - msodbcsql17
         - unixodbc-dev
         - mssql-tools
-      environment:
-        ACCEPT_EULA: 'y'
 
     - name: Install sqlsrv and pdo_sqlsrv via pear/pecl
       pear:
